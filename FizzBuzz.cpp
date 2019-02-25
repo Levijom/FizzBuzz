@@ -8,15 +8,19 @@ Runs as long as user decides
 */
 #include <stdio.h>
 int main(void){
-	int num,i;
+	int num,i,mul1,mul2;
+	printf("Enter first number divider: ");
+	scanf("%d",&mul1);
+	printf("Enter second number divider: ");
+	scanf("%d",&mul2);
 	printf("Enter how long the program should run: ");
 	scanf("%d",&i);
 	for(num=1;num<=i;num++){
-		if(num%3==0){
-			if(num%5==0) printf("FizzBuzz\n");
+		if(num%mul1==0){
+			if(num%mul2==0) printf("FizzBuzz\n");
 			else printf("Fizz\n");
 		}
-		else if(num%5==0) printf("Buzz\n");
+		else if(num%mul2==0) printf("Buzz\n");
 		else printf("%d\n",num);
 	}
 }
